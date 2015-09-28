@@ -44,7 +44,7 @@ Configuration files:
 
 
 
-1. apache2 - php
+1) apache2 - php
 
 http://192.168.0.212/time.php
 
@@ -56,7 +56,7 @@ PHP 5.5.9
 
 
 
-2. apache2 - mod_cgi - bash script
+2) apache2 - mod_cgi - bash script
 
 http://192.168.0.212/cgi-bin/example-bash.sh
 
@@ -68,7 +68,7 @@ apache 2.4.7
 
 
 
-3. nginx - http_perl_module
+3) nginx - http_perl_module
 
 http://192.168.0.108/timestamp
 
@@ -80,7 +80,7 @@ nginx 1.9.4
 
 
 
-4. nginx - php-fpm
+4) nginx - php-fpm
 
 http://192.168.0.212:8080/time.php
 
@@ -94,7 +94,7 @@ PHP 5.5.9
 
 
 
-5. nginx - uwsgi - Django (python script)
+5) nginx - uwsgi - Django (python script)
 
 http://192.168.0.211:8080/time
 
