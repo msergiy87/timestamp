@@ -93,12 +93,12 @@ vegeta v5.8.1
 
 sudo echo "GET http://192.168.0.108/timestamp" | ./vegeta -cpus=2 attack -duration=60s -connections=10000 -rate    5000 -workers=10 | tee results.bin | ./vegeta report
 
-    Requests	[total, rate]			300000, 5000.02
-    Duration	[total, attack, wait]		1m0.004098744s, 59.999799897s, 4.298847ms
-    Latencies	[mean, 50, 95, 99, max]		27.386855ms, 5.124731ms, 82.688851ms, 387.187602ms, 2.572129999s
-    Bytes In	[total, mean]			2991860, 9.97
-    Bytes Out	[total, mean]			0, 0.00
-    Success		[ratio]				99.73%
+    Requests    	[total, rate]			300000, 5000.02
+    Duration	    [total, attack, wait]		1m0.004098744s, 59.999799897s, 4.298847ms
+    Latencies	    [mean, 50, 95, 99, max]		27.386855ms, 5.124731ms, 82.688851ms, 387.187602ms, 2.572129999s
+    Bytes In    	[total, mean]			2991860, 9.97
+    Bytes Out   	[total, mean]			0, 0.00
+    Success	    	[ratio]				99.73%
     Status Codes	[code:count]			200:299186  0:814  
     Error Set:
     Get http://192.168.0.108/timestamp: dial tcp 192.168.0.108:80: too many open files
