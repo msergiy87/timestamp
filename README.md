@@ -49,6 +49,7 @@ Configuration files:
 http://192.168.0.212/time.php
 
 apache 2.4.7
+
 PHP 5.5.9
 
 /var/www/html/time.php
@@ -62,6 +63,7 @@ http://192.168.0.212/cgi-bin/example-bash.sh
 apache 2.4.7
 
 /var/www/html/cgi-bin/example-bash.sh
+
 /etc/apache2/sites-available/000-default.conf
 
 
@@ -73,6 +75,7 @@ http://192.168.0.108/timestamp
 nginx 1.9.4
 
 /etc/nginx/nginx.conf
+
 /usr/local/nginx/perl/lib/datetime.pl
 
 
@@ -82,9 +85,11 @@ nginx 1.9.4
 http://192.168.0.212:8080/time.php
 
 nginx/1.4.6
+
 PHP 5.5.9
 
 /etc/nginx/sites-available/default
+
 /usr/share/nginx/html/time.php
 
 
@@ -94,12 +99,17 @@ PHP 5.5.9
 http://192.168.0.211:8080/time
 
 nginx 1.4.6
+
 uwsgi 2.0.11.1
+
 django 1.8.4
+
 python 3.4
 
 uwsgi --socket mysite.sock --wsgi-file time.py
 
 /etc/nginx/nginx.conf
+
 /etc/nginx/sites-available/mysite_nginx.conf
+
 /home/sergiy/uwsgi-tutorial/mysite/time.py
