@@ -27,6 +27,8 @@ We believe that if the model nginx-perl add Haprxy with multiple servers + DNS R
 
 Configuration files:
 
+
+
 1. apache2 - php
 
 http://192.168.0.212/time.php
