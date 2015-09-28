@@ -104,3 +104,5 @@ sudo echo "GET http://192.168.0.108/timestamp" | ./vegeta -cpus=2 attack -durati
     Status Codes	[code:count]	    		200:299186  0:814  
     Error Set:
     Get http://192.168.0.108/timestamp: dial tcp 192.168.0.108:80: too many open files
+    
+![test performance timestamp](https://github.com/msergiy87/timestamp/blob/master/screenshot2.png)
