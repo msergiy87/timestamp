@@ -17,7 +17,7 @@ Used models:
 3. nginx - http_perl_module
 4. nginx - php-fpm
 5. nginx - uwsgi - Django (python script)
-
+6. nginx - nodejs
 
 As shown in the table of comparing results, the most efficient working model is nginx - http_perl_module. At 5000 requests per second it has provided the best result - 99.73% (percentage of successfull requests). The worst rezalt - 6.50% showed the model apache2 - mod_cgi - bash script. Even with 25000 quires nginx - http_perl_module provided result 12.58%.
 
@@ -113,3 +113,23 @@ uwsgi --socket mysite.sock --wsgi-file time.py
 /etc/nginx/sites-available/mysite_nginx.conf
 
 /home/sergiy/uwsgi-tutorial/mysite/time.py
+
+
+
+5) nginx - nodejs
+
+http://192.168.0.101/timestamp
+
+nginx 1.4.6
+
+nodejs 5.5.0
+
+pm2 1.0.0
+
+npm install moment
+
+PORT=8080 pm2 start /var/www/timestamp.js -f
+
+/etc/nginx/nginx.conf
+
+/var/www/timestamp.js
