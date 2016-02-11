@@ -133,3 +133,34 @@ PORT=8080 pm2 start /var/www/timestamp.js -f
 /etc/nginx/nginx.conf
 
 /var/www/timestamp.js
+
+
+
+6) nginx - unicorn - ruby
+
+http://192.168.0.103
+
+nginx 1.4.6
+
+unicorn 5.0.1
+
+supervisor 3.0
+
+/etc/nginx/sites-available/nginx_timestamp_unicorn.conf
+
+/home/sergiy/start_unicorn.sh
+
+/etc/supervisor/conf.d/supervisor_unicorn.conf
+
+Create new application:
+```
+rails new hello_world
+rails generate controller pages
+```
+
+app configs:
+```
+hello_world/app/controllers/pages_controller.rb
+hello_world/app/views/pages/home.html.erb
+hello_world/config/routes.rb
+```
