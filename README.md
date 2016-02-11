@@ -181,6 +181,8 @@ ruby 2.2.1
 
 /home/sergiy/webrick.rb
 
+source /usr/local/rvm/scripts/rvm && ruby /home/sergiy/webrick.rb
+
 Create new application:
 ```
 rails new hello_world
