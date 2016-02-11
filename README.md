@@ -5,12 +5,12 @@ I performed test objectives:
 
 The test was to find the most appropriate model in wich the execution of web service timestamp could handle the largest possible number of queries. The web browser should show a line with numbers (eg 1443104667), which is constantly changing - unix timestamp (https://shafiqissani.wordpress.com/2010/09/30/how-to-get-the-current-epoch-time-unix-timestamp/)
 
-Equipments:
+#####Equipments:
 
 vegetа for test performance (https://github.com/tsenart/vegeta).
 Laptop with Linux Mint 17.1, with virtualbox 4.3, Linux Ubuntu 14.04 x64 on VHS, 2 Gb RAM, 2 CPU
 
-Used models:
+#####Used models:
 
 1. apache2 - php
 2. apache2 - mod_cgi - bash script
@@ -40,11 +40,9 @@ sudo echo "GET http://192.168.0.108/timestamp" | ./vegeta -cpus=2 attack -durati
 ![test performance timestamp](https://github.com/msergiy87/timestamp/blob/master/screenshot2.png)
 
 
-Configuration files:
+####Configuration files:
 
-
-
-1) apache2 - php
+#####1) apache2 - php
 
 http://192.168.0.212/time.php
 
@@ -56,7 +54,7 @@ PHP 5.5.9
 
 
 
-2) apache2 - mod_cgi - bash script
+#####2) apache2 - mod_cgi - bash script
 
 http://192.168.0.212/cgi-bin/example-bash.sh
 
@@ -68,7 +66,7 @@ apache 2.4.7
 
 
 
-3) nginx - http_perl_module
+#####3) nginx - http_perl_module
 
 http://192.168.0.108/timestamp
 
@@ -80,7 +78,7 @@ nginx 1.9.4
 
 
 
-4) nginx - php-fpm
+#####4) nginx - php-fpm
 
 http://192.168.0.212:8080/time.php
 
@@ -94,7 +92,7 @@ PHP 5.5.9
 
 
 
-5) nginx - uwsgi - Django (python script)
+#####5) nginx - uwsgi - Django (python script)
 
 http://192.168.0.211:8080/time
 
@@ -116,7 +114,7 @@ uwsgi --socket mysite.sock --wsgi-file time.py
 
 
 
-5) nginx - nodejs
+#####5) nginx - nodejs
 
 http://192.168.0.101/timestamp
 
@@ -136,7 +134,7 @@ PORT=8080 pm2 start /var/www/timestamp.js -f
 
 
 
-6) nginx - unicorn - ruby
+#####7) nginx - unicorn - ruby
 
 http://192.168.0.103
 
@@ -167,7 +165,9 @@ hello_world/app/views/pages/home.html.erb
 hello_world/config/routes.rb
 ```
 
-7) nginx - webrick - ruby
+
+
+#####8) nginx - webrick - ruby
 
 http://192.168.0.103/timestamp
 
