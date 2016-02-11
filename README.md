@@ -126,11 +126,15 @@ pm2 1.0.0
 
 npm install moment
 
-PORT=8080 pm2 start /var/www/timestamp.js -f
+pm2 start /var/www/timestamp.js -f
 
-/etc/nginx/nginx.conf
+pm2 start /var/www/timestamp2.js -f
+
+/etc/nginx/sites-available/nginx_nodejs.conf
 
 /var/www/timestamp.js
+
+/var/www/timestamp2.js
 
 
 
