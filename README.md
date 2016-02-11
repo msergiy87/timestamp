@@ -146,6 +146,8 @@ unicorn 5.0.1
 
 supervisor 3.0
 
+ruby 2.2.1
+
 /etc/nginx/sites-available/nginx_timestamp_unicorn.conf
 
 /home/sergiy/start_unicorn.sh
@@ -164,3 +166,31 @@ hello_world/app/controllers/pages_controller.rb
 hello_world/app/views/pages/home.html.erb
 hello_world/config/routes.rb
 ```
+
+7) nginx - webrick - ruby
+
+http://192.168.0.103/timestamp
+
+nginx 1.4.6
+
+webrick 1.3.1
+
+ruby 2.2.1
+
+/etc/nginx/sites-available/nginx_timestamp_webrick.conf
+
+/home/sergiy/webrick.rb
+
+Create new application:
+```
+rails new hello_world
+rails generate controller pages
+```
+
+app configs:
+```
+hello_world/app/controllers/pages_controller.rb
+hello_world/app/views/pages/home.html.erb
+hello_world/config/routes.rb
+```
+
