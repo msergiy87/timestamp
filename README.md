@@ -18,6 +18,9 @@ Laptop with Linux Mint 17.1, with virtualbox 4.3, Linux Ubuntu 14.04 x64 on VHS,
 4. nginx - php-fpm
 5. nginx - uwsgi - Django (python script)
 6. nginx - nodejs
+7. nginx - unicorn - ruby
+8. nginx - webrick - ruby
+9. nginx - uwsgi - flask
 
 As shown in the table of comparing results, the most efficient working model is nginx - http_perl_module. At 5000 requests per second it has provided the best result - 99.73% (percentage of successfull requests). The worst rezalt - 6.50% showed the model apache2 - mod_cgi - bash script. Even with 25000 quires nginx - http_perl_module provided result 12.58%.
 
@@ -114,7 +117,7 @@ uwsgi --socket mysite.sock --wsgi-file time.py
 
 
 
-#####5) nginx - nodejs
+#####6) nginx - nodejs
 
 http://192.168.0.101/timestamp
 
@@ -200,3 +203,24 @@ hello_world/app/views/pages/home.html.erb
 hello_world/config/routes.rb
 ```
 
+#####9) nginx - uwsgi - flask
+
+http://192.168.0.107/timestamp
+
+nginx 1.4.6
+
+uwsgi 2.0.12
+
+flask 0.10.1
+
+python 3.4
+
+/etc/nginx/sites-available/nginx_myproject
+
+/home/sergiy/myproject/myproject.py
+
+/home/sergiy/myproject/wsgi.py
+
+/home/sergiy/myproject/myproject.ini
+
+/etc/init/myproject.conf
