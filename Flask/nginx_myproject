@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name 192.168.0.107;
+
+    location /timestamp {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/sergiy/myproject/myproject.sock;
+    }
+}
